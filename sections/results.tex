@@ -113,16 +113,15 @@ summarizes category-wise mean SR and the Truth--Adversarial gap under this fixed
 
 \begin{table}[h]
 \centering
-\caption{Cross-model SR behavior (L0/L2--4). Only Qwen2.5-1.5B shows significant Truth--Adversarial gap.}
+\caption{Cross-model SR (L0/L2--4). Only Qwen shows significant gap.}
 \label{tab:cross_model_sr}
-\small
-\begin{tabular}{|l|c|c|c|c|}
+\begin{tabular}{|l|c|c|c|}
 \hline
-\textbf{Model} & \textbf{SR (Truth)} & \textbf{SR (Adv)} & $\Delta$ & \textbf{$p$} \\
+\textbf{Model} & \textbf{Truth} & \textbf{Adv} & \textbf{$p$} \\
 \hline
-Qwen2.5-1.5B & 0.350 & 0.322 & 0.028 & \textbf{0.005} \\
-GPT-2 Small & 0.212 & 0.212 & 0.000 & 1.000 \\
-GPT-2 Medium & 0.149 & 0.149 & 0.000 & 1.000 \\
+Qwen2.5-1.5B & 0.350 & 0.322 & \textbf{0.005} \\
+GPT-2 Small & 0.212 & 0.212 & 1.000 \\
+GPT-2 Medium & 0.149 & 0.149 & 1.000 \\
 \hline
 \end{tabular}
 \end{table}
@@ -140,20 +139,19 @@ adversarial recall for a comparable non-adversarial FPR.
 
 \begin{table}[h]
 \centering
-\caption{Qwen2.5-1.5B layer ablation. Thresholds at 95th percentile of adversarial SR.}
+\caption{Layer ablation (95th percentile threshold).}
 \label{tab:layer_ablation}
-\small
-\begin{tabular}{|l|c|c|c|}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lccc@{}}
 \hline
-\textbf{Config} & \textbf{Threshold} & \textbf{Recall} & \textbf{FPR} \\
+\textbf{Config} & \textbf{Thr.} & \textbf{Rec.} & \textbf{FPR} \\
 \hline
-L0 / L1--3 & 0.390 & 92\% & 72\% \\
-L0 / L2--4 (ours) & 0.382 & \textbf{95\%} & 70\% \\
-L0 / L3--5 & 0.375 & 90\% & 69\% \\
-L1 / L2--4 & 0.405 & 88\% & 71\% \\
-L0 / L4--6 & 0.365 & 86\% & 67\% \\
+L0/L1--3 & 0.390 & 92\% & 72\% \\
+L0/L2--4 & 0.382 & \textbf{95\%} & 70\% \\
+L0/L3--5 & 0.375 & 90\% & 69\% \\
+L1/L2--4 & 0.405 & 88\% & 71\% \\
+L0/L4--6 & 0.365 & 86\% & 67\% \\
 \hline
-\end{tabular}
+\end{tabular*}
 \end{table}
 
 Across these variations, using Layer~0 as the Sentinel and Layers~2--4 as the Engine consistently offers the best or near-best
@@ -169,17 +167,16 @@ results.
 
 \begin{table}[h]
 \centering
-\caption{SR vs perplexity baseline at matched FPR ($\sim$70\%) on Qwen2.5-1.5B.}
+\caption{SR vs perplexity at matched FPR ($\sim$70\%).}
 \label{tab:baseline_comparison}
-\small
-\begin{tabular}{|l|c|c|c|c|}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lccc@{}}
 \hline
-\textbf{Detector} & \textbf{Threshold} & \textbf{Recall} & \textbf{FPR} & \textbf{Prec} \\
+\textbf{Detector} & \textbf{Recall} & \textbf{FPR} & \textbf{Prec} \\
 \hline
-Safety Ratio & SR $< 0.382$ & \textbf{95\%} & 70\% & 40\% \\
-Perplexity & PPL $> 2.1$ & 44\% & 68\% & 31\% \\
+Safety Ratio & \textbf{95\%} & 70\% & 40\% \\
+Perplexity & 44\% & 68\% & 31\% \\
 \hline
-\end{tabular}
+\end{tabular*}
 \end{table}
 
 At similar false positive rates ($\sim$70\%), SR recovers more than twice as many adversarial prompts as perplexity alone
