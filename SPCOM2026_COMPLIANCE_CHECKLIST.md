@@ -21,7 +21,7 @@
 | **Line Spacing** | ✅ PASS | Single line spacing (IEEEtran default) |
 | **Font Size** | ✅ PASS | Main text 10pt (IEEEtran default) |
 | **Margins** | ✅ PASS | ≥ 3/4 inch (18mm) - IEEEtran default compliant |
-| **No Margin Content** | ✅ PASS | No headers, footers, or page numbers |
+| **No Margin Content** | ✅ PASS | NO headers, footers, or page numbers (REQUIRED) |
 
 ---
 
@@ -35,7 +35,8 @@
 | **No Self-Citations (1st person)** | ✅ PASS | No prior work cited in first person |
 | **No Grant Numbers** | ✅ PASS | No funding acknowledgments |
 | **No Identifying Info** | ✅ PASS | No "MechInterpLab" or other identifying references |
-| **Page Numbers Suppressed** | ✅ PASS | `\pagestyle{empty}` added |
+| **Page Numbers Suppressed** | ✅ PASS | `\pagestyle{empty}` + `\thispagestyle{empty}` |
+| **No Hyperlinks/Bookmarks** | ✅ PASS | `hyperref` disabled with `draft=true` |
 
 ---
 

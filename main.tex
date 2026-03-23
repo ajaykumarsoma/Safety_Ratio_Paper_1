@@ -9,11 +9,20 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
-\usepackage{hyperref}
+% SPCOM 2026: Disable hyperlinks and bookmarks
+\usepackage[draft]{hyperref}
+\hypersetup{
+    draft=true,
+    hidelinks,
+    bookmarks=false,
+    pdfborder={0 0 0}
+}
 
-% SPCOM 2026 Compliance: Use plain page style (page numbers at bottom center)
-% Note: SPCOM requires page numbers for submission
-\pagestyle{plain}
+% SPCOM 2026 Compliance: NO page numbers, headers, or footers
+% "The submitted PDF must NOT contain any bookmarks or hyperlinks.
+% It should have no content written in the margins.
+% In particular, no header, footer, or page numbers."
+\pagestyle{empty}
 
 % Graphics paths: figures live in a local subfolder for the IEEE project,
 % with a fallback to the parent MI-Experiments directory when compiling locally.
@@ -28,8 +37,8 @@
 
 \maketitle
 
-% Force page number on first page (SPCOM requirement)
-\thispagestyle{plain}
+% Ensure no page number on first page (SPCOM requirement)
+\thispagestyle{empty}
 
 % Abstract and keywords
 \begin{abstract}
