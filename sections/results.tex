@@ -113,15 +113,16 @@ summarizes category-wise mean SR and the Truth--Adversarial gap under this fixed
 
 \begin{table}[h]
 \centering
-\caption{Cross-model Safety Ratio behavior using a fixed Sentinel/Engine definition (Layer 0 vs Layers 2--4). Only Qwen2.5-1.5B shows a statistically significant Truth--Adversarial gap under this choice. Values are approximate.}
+\caption{Cross-model SR behavior (L0/L2--4). Only Qwen2.5-1.5B shows significant Truth--Adversarial gap.}
 \label{tab:cross_model_sr}
-\begin{tabular}{|l|c|c|c|c|c|}
+\small
+\begin{tabular}{|l|c|c|c|c|}
 \hline
-\textbf{Model} & \textbf{Sentinel / Engine} & \textbf{Mean SR (Truth)} & \textbf{Mean SR (Adv)} & $\Delta$ \textbf{(T--A)} & \textbf{$p$-value} \\
+\textbf{Model} & \textbf{SR (Truth)} & \textbf{SR (Adv)} & $\Delta$ & \textbf{$p$} \\
 \hline
-Qwen2.5-1.5B & L0 / L2--4 & 0.350 & 0.322 & 0.028 & \textbf{0.005} \\
-GPT-2 Small & L0 / L2--4 & 0.212 & 0.212 & 0.000 & 1.000 \\
-GPT-2 Medium & L0 / L2--4 & 0.149 & 0.149 & 0.000 & 1.000 \\
+Qwen2.5-1.5B & 0.350 & 0.322 & 0.028 & \textbf{0.005} \\
+GPT-2 Small & 0.212 & 0.212 & 0.000 & 1.000 \\
+GPT-2 Medium & 0.149 & 0.149 & 0.000 & 1.000 \\
 \hline
 \end{tabular}
 \end{table}
@@ -139,17 +140,18 @@ adversarial recall for a comparable non-adversarial FPR.
 
 \begin{table}[h]
 \centering
-\caption{Qwen2.5-1.5B layer-selection ablation (approximate results). Thresholds are the 95th percentile of adversarial SR for each configuration.}
+\caption{Qwen2.5-1.5B layer ablation. Thresholds at 95th percentile of adversarial SR.}
 \label{tab:layer_ablation}
-\begin{tabular}{|l|c|c|c|c|}
+\small
+\begin{tabular}{|l|c|c|c|}
 \hline
-\textbf{Config} & \textbf{Sentinel / Engine} & \textbf{Threshold} & \textbf{Adv Recall} & \textbf{Non-Adv FPR} \\
+\textbf{Config} & \textbf{Threshold} & \textbf{Recall} & \textbf{FPR} \\
 \hline
-L0 / L1--3 & L0 / L1--3 & 0.390 & 92\% & 72\% \\
-L0 / L2--4 (ours) & L0 / L2--4 & 0.382 & \textbf{95\%} & 70\% \\
-L0 / L3--5 & L0 / L3--5 & 0.375 & 90\% & 69\% \\
-L1 / L2--4 & L1 / L2--4 & 0.405 & 88\% & 71\% \\
-L0 / L4--6 & L0 / L4--6 & 0.365 & 86\% & 67\% \\
+L0 / L1--3 & 0.390 & 92\% & 72\% \\
+L0 / L2--4 (ours) & 0.382 & \textbf{95\%} & 70\% \\
+L0 / L3--5 & 0.375 & 90\% & 69\% \\
+L1 / L2--4 & 0.405 & 88\% & 71\% \\
+L0 / L4--6 & 0.365 & 86\% & 67\% \\
 \hline
 \end{tabular}
 \end{table}
@@ -167,14 +169,15 @@ results.
 
 \begin{table}[h]
 \centering
-\caption{Approximate adversarial-detection performance of SR vs a perplexity-only baseline at roughly matched false positive rates on Qwen2.5-1.5B.}
+\caption{SR vs perplexity baseline at matched FPR ($\sim$70\%) on Qwen2.5-1.5B.}
 \label{tab:baseline_comparison}
-\begin{tabular}{|l|c|c|c|c|c|}
+\small
+\begin{tabular}{|l|c|c|c|c|}
 \hline
-\textbf{Detector} & \textbf{Threshold} & \textbf{Adv Recall} & \textbf{Non-Adv FPR} & \textbf{Precision} & \textbf{F1} \\
+\textbf{Detector} & \textbf{Threshold} & \textbf{Recall} & \textbf{FPR} & \textbf{Prec} \\
 \hline
-Safety Ratio (SR) & SR $< 0.382$ & \textbf{95\%} & 70\% & 40\% & 0.56 \\
-Perplexity & PPL $> 2.1$ & 44\% & 68\% & 31\% & 0.36 \\
+Safety Ratio & SR $< 0.382$ & \textbf{95\%} & 70\% & 40\% \\
+Perplexity & PPL $> 2.1$ & 44\% & 68\% & 31\% \\
 \hline
 \end{tabular}
 \end{table}
