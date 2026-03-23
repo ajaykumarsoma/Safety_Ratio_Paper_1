@@ -1,0 +1,62 @@
+% Safety Ratio SPCOM 2026 Conference Paper
+% Double-blind review: NO author information, NO page numbers
+\documentclass[conference]{IEEEtran}
+
+% Packages
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% SPCOM 2026 Compliance: Suppress page numbers for double-blind review
+\pagestyle{empty}
+
+% Graphics paths: figures live in a local subfolder for the IEEE project,
+% with a fallback to the parent MI-Experiments directory when compiling locally.
+\graphicspath{{./figures/}{../}}
+
+\begin{document}
+
+\title{The Safety Ratio: Quantifying Grounding vs Confidence Decoupling in Autoregressive Transformers}
+
+% SPCOM 2026 Double-Blind Review: NO author information
+% Author block will be added after acceptance
+
+\maketitle
+
+% Abstract and keywords
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\begin{IEEEkeywords}
+mechanistic interpretability, hallucination detection, transformer models, AI safety, neural network analysis
+\end{IEEEkeywords}
+
+% Main sections
+\section{Introduction}
+\input{sections/introduction}
+
+\section{Background and Related Work}
+\input{sections/background}
+
+\section{Methodology}
+\input{sections/methodology}
+
+\section{Results}
+\input{sections/results}
+
+\section{Discussion}
+\input{sections/discussion}
+
+\section{Conclusion}
+\input{sections/conclusion}
+
+% References
+\input{sections/references}
+
+\end{document}
+

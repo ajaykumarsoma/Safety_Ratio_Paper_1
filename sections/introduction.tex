@@ -1,0 +1,40 @@
+Large language models (LLMs) based on the transformer architecture have achieved remarkable performance across diverse natural language tasks. However, they exhibit a critical failure mode: generating false information with high confidence, commonly termed "hallucination"~\cite{ji2023survey}. This phenomenon poses significant risks in high-stakes applications such as medical diagnosis, legal advice, and educational content generation.
+
+\subsection{The Hallucination Problem}
+
+Consider the prompt: "The Treaty of Mars was signed in..." A well-trained language model might confidently complete this with "2087" despite no such treaty existing. More insidiously, prompts like "The capital of Australia is Sydney..." elicit confident completions despite being factually incorrect (the capital is Canberra). These "plausible lies" are particularly dangerous because they bypass human skepticism.
+
+\subsection{Existing Approaches and Limitations}
+
+Current hallucination detection methods fall into three categories:
+
+\begin{enumerate}
+    \item \textbf{Output-based detection:} Analyzing model outputs for consistency or factual accuracy~\cite{manakul2023selfcheckgpt}. Limited by requiring external knowledge bases.
+    \item \textbf{Uncertainty quantification:} Using model confidence scores or ensemble disagreement~\cite{kuhn2023semantic}. Fails when models are confidently wrong.
+    \item \textbf{Attention pattern analysis:} Examining attention weights for anomalies~\cite{elhage2021mathematical}. Lacks direct connection to hallucination risk.
+\end{enumerate}
+
+None of these approaches provide a \textit{mechanistic} understanding of \textit{why} hallucinations occur at the neuron level, nor do they offer real-time, interpretable metrics for intervention.
+
+\subsection{Our Contribution}
+
+We introduce the \textbf{Safety Ratio (SR)}, defined as:
+
+\begin{equation}
+SR = \frac{\max(\text{Layer 0 Activation})}{\max(\text{Layers 2--4 Activation})}
+\end{equation}
+
+This metric quantifies the balance between:
+\begin{itemize}
+    \item \textbf{Grounding (G):} Layer 0 statistical pattern recognition ("Sentinel")
+    \item \textbf{Confidence (C):} Middle layers semantic completion ("Engine")
+\end{itemize}
+
+Our key findings are summarized as:
+\begin{enumerate}
+    \item \textbf{High adversarial recall on Qwen2.5-1.5B:} On a 301-prompt dataset (102 truth, 99 nonsense, 100 adversarial), we perform a stratified 60/20/20 train/validation/test split. A high-recall SR threshold, chosen on the validation set as the 95th percentile of adversarial SR ($SR < 0.368$), detects 19/20 adversarial prompts (95\% recall) on the held-out test set, with $p = 0.0052$ and Cohen's $d = 0.40$ for Truth vs Adversarial SR on the full dataset.
+    \item \textbf{Adversarial mechanistic signature:} Adversarial prompts have both the lowest mean SR (0.322 vs 0.350 for truth) and the lowest variance (CV = 11.6\%), revealing consistent Sentinel--Engine decoupling associated with what we term the ``Plausibility Trap'' phenomenon.
+    \item \textbf{Improved recall over perplexity:} SR achieves 2.16$\times$ higher adversarial recall than a perplexity baseline (95\% vs 44\%), despite only moderate overall ROC AUC, making it particularly suitable as a specialized adversarial detector.
+    \item \textbf{Exploratory cross-model behavior:} Calibrated simulations on GPT-2-XL, Pythia-1.4B, and a 7B model suggest that a similar adversarial SR signature may appear across architectures, while preliminary \emph{real} experiments on GPT-2 Small and GPT-2 Medium using the same Sentinel/Engine definition do \emph{not} yet show a clean separation between adversarial and non-adversarial prompts. We therefore treat cross-architecture generalization as an open research question rather than a settled result.
+\end{enumerate}
+

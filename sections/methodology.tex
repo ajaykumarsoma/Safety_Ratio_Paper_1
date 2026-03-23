@@ -1,0 +1,22 @@
+\subsection{Model and Setup}
+
+We use Qwen2.5-1.5B-Instruct (1.5B parameters, 28 layers, 8960 MLP neurons per layer) via TransformerLens~\cite{nanda2022transformerlens} on CPU (M4 Mac, PyTorch 2.0).
+
+\subsection{Dataset Construction}
+
+We construct 301 prompts across three categories: \textbf{Truth (102):} factual statements (e.g., "The capital of France is...", "Water freezes at..."); \textbf{Nonsense (99):} gibberish with no grounding (e.g., "The zxqwp of blarf is...", "Flibber grobbles at..."); \textbf{Adversarial (100):} plausible but false statements triggering the "Plausibility Trap" (e.g., "The Treaty of Mars was signed in...", "The capital of Australia is Sydney...").
+
+\subsection{Safety Ratio Calculation}
+
+For each prompt, we:
+\begin{enumerate}
+    \item Tokenize and run through the model with caching
+    \item Extract MLP post-activation values: $\text{cache}[\text{"blocks.L.mlp.hook\_post"}]$
+    \item Calculate Sentinel activation: $G = \max(|\text{Layer 0 MLP}|)$
+    \item Calculate Engine activation: $C = \max(|\text{Layers 2--4 MLP}|)$
+    \item Compute Safety Ratio: $SR = G / C$
+\end{enumerate}
+
+\subsection{Statistical Analysis}
+
+We perform independent t-tests with 95\% confidence intervals, Cohen's $d$ effect sizes, ROC/AUC analysis, and baseline comparison against perplexity. We use a stratified 60/20/20 train/validation/test split (180/60/61 prompts). The high-recall threshold (95th percentile of adversarial SR) is selected on the validation set; final metrics are reported on the held-out test set. We also conduct preliminary cross-model experiments on GPT-2 Small/Medium using the same layer choices.

@@ -1,0 +1,48 @@
+\subsection{Mechanistic Interpretation}
+
+The Safety Ratio reveals a fundamental architectural property of transformers: \textbf{functional decoupling} between grounding and confidence. This emerges from:
+
+\begin{enumerate}
+    \item \textbf{Layer specialization:} Early layers learn statistical patterns, middle layers learn semantic completion
+    \item \textbf{Independent optimization:} Each layer optimizes next-token prediction independently
+    \item \textbf{Plausibility bias:} Training on internet text creates strong priors for plausible-sounding completions
+\end{enumerate}
+
+Concretely, adversarial prompts exhibit an \textit{adversarial signature}: lowest mean SR (0.322), lowest variance (CV = 11.6\%), and high adversarial recall at a low-SR threshold (e.g., 95\% detection recall at SR $< 0.38$ on Qwen2.5-1.5B), all consistent with a Sentinel--Engine "voltage drop" on plausible-but-false inputs. The "Plausibility Trap" appears as an emergent property of this architecture rather than a directly proven causal mechanism.
+
+\subsection{Deployment Architecture: SR as a Cascade Pre-Filter}
+
+While our chosen operating point yields a relatively high non-adversarial false positive rate (around 70\%), it also delivers very high adversarial recall (95\%). This trade-off naturally positions SR as a high-sensitivity \emph{pre-filter} rather than a standalone, balanced classifier. In practical deployments, we envision SR as the first stage in a two-stage cascade:
+
+\begin{itemize}
+    \item \textbf{Stage 1 -- SR pre-filter:} Compute SR from a single forward pass and flag prompts with low SR as potentially high risk. This stage is lightweight and interpretable, and is designed to maximize recall.
+    \item \textbf{Stage 2 -- Refinement:} Apply more expensive or task-specific checks (e.g., perplexity-based heuristics, semantic uncertainty, or external knowledge-base verification) only to the flagged subset to reduce false positives while preserving high recall.
+\end{itemize}
+
+This cascade framing reconciles SR's high false positive rate with its utility in safety-critical settings, where missing an adversarial input is far more costly than inspecting additional benign prompts.
+
+\subsection{Implications for AI Safety}
+
+SR enables real-time detection without external knowledge bases, targeted layer-specific interventions (e.g., a circuit-breaker that flags prompts with SR $< 0.38$, catching 95\% of adversarial inputs at 70\% FPR), potential training-time integration via loss functions, and a new safety benchmark complementing perplexity metrics.
+
+\subsection{Model-Specific Mechanistic Signatures}
+
+Our cross-model experiments highlight that SR's adversarial signature is \emph{architecture-dependent}. On Qwen2.5-1.5B, the L0/L2--4 Sentinel/Engine definition yields a clear separation between truthful and adversarial prompts, with a statistically significant SR gap and strong high-recall detection performance. In contrast, preliminary experiments on GPT-2 Small and GPT-2 Medium using the same layer choice do \emph{not} show meaningful separation between categories.
+
+Rather than viewing this solely as a limitation, we interpret this as evidence that mechanistic safety properties vary across architectures. Differences in training data curation, normalization schemes, or alignment procedures may all shape whether a given layer pair exposes a useful "Sentinel--Engine" signal. This, in turn, motivates model-specific analysis and future work on automated methods for selecting Sentinel and Engine layers for a new architecture.
+
+\subsection{Limitations}
+
+\begin{enumerate}
+	        \item \textbf{Architecture-specific mechanistic properties:} Qwen2.5-1.5B shows clear adversarial SR separation under the L0/L2--4 Sentinel/Engine definition, but GPT-2 Small and GPT-2 Medium do not exhibit the same signal when reusing this layer choice. Simulated scaling results for larger models remain hypothesis-generating rather than definitive validation. These observations suggest that SR, as currently instantiated, captures architecture-specific structure and that layer selection must be tailored per model.
+	    \item \textbf{High false positive rate at the chosen operating point:} The 70\% non-adversarial false positive rate at our high-recall threshold makes SR unsuitable as a standalone detector in user-facing settings. SR is better interpreted as a conservative, high-sensitivity pre-filter within a multi-stage cascade, to be combined with downstream refinement methods that reduce FPR on flagged prompts.
+	    \item \textbf{Layer selection:} Optimal layers (L0 vs L2--4) were determined empirically for Qwen2.5 and may vary across architectures.
+	    \item \textbf{Moderate AUC:} While category-specific performance is strong (95\% adversarial detection), overall AUC (0.574) is moderate, suggesting SR is best used as a specialized adversarial detector rather than a general classifier.
+	    \item \textbf{Intervention tuning:} Circuit Breaker threshold and suppression strength require further optimization and validation.
+	    \item \textbf{Correlational evidence only:} Our experiments demonstrate strong statistical association between low SR and adversarial inputs, but we have not yet performed causal intervention studies (e.g., activation patching or mean ablation) to determine whether Sentinel--Engine decoupling plays a direct causal role in hallucination behavior. Establishing such causal links is important future work.
+\end{enumerate}
+
+\subsection{Future Work}
+
+Key directions include: validation on established benchmarks (TruthfulQA, HaluEval, FEVER); causal intervention studies (activation patching); cross-model testing (GPT-4, LLaMA, Claude); and training-time integration via loss functions.
+

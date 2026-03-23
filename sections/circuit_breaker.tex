@@ -1,0 +1,27 @@
+\subsection{Design}
+
+We propose a real-time intervention mechanism based on the empirically-determined threshold:
+
+\begin{algorithmic}
+\STATE \textbf{Input:} Prompt $p$, Threshold $\tau = 0.3822$ (95th percentile of adversarial SR)
+\STATE \textbf{Output:} Modified activations or warning flag
+\STATE
+\STATE $SR \gets \text{CalculateSafetyRatio}(p)$
+\IF{$SR < \tau$}
+    \STATE \textbf{Option 1:} Suppress Layers 2--4 activations by 50--70\%
+    \STATE \textbf{Option 2:} Flag output with "High hallucination risk" warning
+    \STATE \textbf{Option 3:} Refuse to generate completion
+\ENDIF
+\end{algorithmic}
+
+\subsection{Expected Performance}
+
+Based on our 301-prompt analysis, the Circuit Breaker would:
+\begin{itemize}
+    \item \textbf{Catch 95\% of adversarial prompts} (95/100 detected)
+    \item \textbf{Flag 70\% of benign prompts} (141/201 false positives)
+    \item \textbf{Trade-off:} High recall (safety) at cost of user experience (false alarms)
+\end{itemize}
+
+For safety-critical applications (medical, legal, financial), this trade-off is acceptable: missing an adversarial prompt (false negative) is more costly than flagging a benign prompt (false positive). For user-facing applications, combining SR with perplexity or external factual checks may provide better balance (for example, using SR as a conservative pre-filter and downstream methods to reduce false positives).
+

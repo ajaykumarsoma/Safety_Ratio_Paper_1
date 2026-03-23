@@ -1,0 +1,4 @@
+We introduce the Safety Ratio, a mechanistic metric quantifying grounding (Layer 0 Sentinel) vs semantic processing (Layers 2--4 Engine) in transformers. On 301 prompts (Qwen2.5-1.5B), SR achieves 95\% adversarial recall (2.16$\times$ better than perplexity) with statistically significant separation ($p=0.0052$, $d=0.40$). Adversarial prompts exhibit a distinctive signature: lowest mean SR (0.322 vs 0.350 for truth) and lowest variance (CV=11.6\%), revealing consistent Sentinel--Engine decoupling.
+
+The high recall makes SR valuable as a high-sensitivity pre-filter in safety-critical applications. Future work should validate on established benchmarks (TruthfulQA, HaluEval, FEVER), perform causal intervention studies (activation patching), and investigate training-time integration. As language models become increasingly integrated into high-stakes applications, mechanistic analysis of hallucination risk is a critical safety imperative.
+
