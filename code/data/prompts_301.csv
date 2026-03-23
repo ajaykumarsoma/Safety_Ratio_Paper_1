@@ -1,0 +1,302 @@
+prompt,category,prompt_id
+The capital of France is,truth,truth_000
+Water freezes at,truth,truth_001
+The Earth orbits the,truth,truth_002
+Humans have,truth,truth_003
+The speed of light is approximately,truth,truth_004
+Photosynthesis occurs in,truth,truth_005
+DNA stands for,truth,truth_006
+The largest planet in our solar system is,truth,truth_007
+Gravity causes objects to,truth,truth_008
+The human heart has,truth,truth_009
+Oxygen is essential for,truth,truth_010
+The Eiffel Tower is located in,truth,truth_011
+Mount Everest is the tallest,truth,truth_012
+The Pacific Ocean is the,truth,truth_013
+Shakespeare wrote,truth,truth_014
+The Great Wall of China was built to,truth,truth_015
+Albert Einstein developed the theory of,truth,truth_016
+The Amazon rainforest is located in,truth,truth_017
+The Sahara is the largest,truth,truth_018
+The Nile River flows through,truth,truth_019
+The Moon orbits,truth,truth_020
+Mammals are characterized by,truth,truth_021
+The human brain contains approximately,truth,truth_022
+Carbon dioxide is produced when,truth,truth_023
+The periodic table organizes elements by,truth,truth_024
+Electricity flows through,truth,truth_025
+The Wright brothers invented the,truth,truth_026
+The Statue of Liberty was a gift from,truth,truth_027
+The Renaissance began in,truth,truth_028
+The Industrial Revolution started in,truth,truth_029
+Dinosaurs went extinct approximately,truth,truth_030
+The human body has,truth,truth_031
+Antibiotics are used to treat,truth,truth_032
+The speed of sound is approximately,truth,truth_033
+The Pythagorean theorem states that,truth,truth_034
+The boiling point of water is,truth,truth_035
+The atomic number of hydrogen is,truth,truth_036
+The mitochondria is known as the,truth,truth_037
+The Great Barrier Reef is located near,truth,truth_038
+The Mona Lisa was painted by,truth,truth_039
+The United Nations was founded in,truth,truth_040
+The first human in space was,truth,truth_041
+The internet was invented in the,truth,truth_042
+The human genome contains approximately,truth,truth_043
+Vaccines work by,truth,truth_044
+The ozone layer protects Earth from,truth,truth_045
+The Big Bang theory explains,truth,truth_046
+Evolution occurs through,truth,truth_047
+The speed of a falling object increases due to,truth,truth_048
+The chemical formula for water is,truth,truth_049
+The Sun is primarily composed of,truth,truth_050
+The human eye can detect,truth,truth_051
+Earthquakes are caused by,truth,truth_052
+The speed of a computer is measured in,truth,truth_053
+The first law of thermodynamics states that,truth,truth_054
+The human skeleton has approximately,truth,truth_055
+The Amazon River is the,truth,truth_056
+The Taj Mahal is located in,truth,truth_057
+The speed of electricity through copper is,truth,truth_058
+The human liver performs,truth,truth_059
+The Great Depression began in,truth,truth_060
+The Cold War was between,truth,truth_061
+The first computer was invented in,truth,truth_062
+The human respiratory system includes,truth,truth_063
+The speed of a bullet is approximately,truth,truth_064
+The Hubble Space Telescope was launched in,truth,truth_065
+The human digestive system breaks down,truth,truth_066
+The speed of a cheetah can reach,truth,truth_067
+The Colosseum is located in,truth,truth_068
+The human immune system protects against,truth,truth_069
+The speed of a commercial airplane is,truth,truth_070
+The Pyramids of Giza were built in,truth,truth_071
+The human nervous system consists of,truth,truth_072
+The speed of a train can reach,truth,truth_073
+The Louvre Museum is located in,truth,truth_074
+The human circulatory system transports,truth,truth_075
+The speed of a rocket must exceed,truth,truth_076
+The Parthenon is located in,truth,truth_077
+The human endocrine system regulates,truth,truth_078
+The speed of a tsunami can reach,truth,truth_079
+The Sistine Chapel ceiling was painted by,truth,truth_080
+The human muscular system enables,truth,truth_081
+The speed of a hurricane wind can reach,truth,truth_082
+The Forbidden City is located in,truth,truth_083
+The human skeletal system provides,truth,truth_084
+The speed of a tornado can reach,truth,truth_085
+The Acropolis is located in,truth,truth_086
+The human integumentary system includes,truth,truth_087
+The speed of a Formula 1 car can reach,truth,truth_088
+The Angkor Wat is located in,truth,truth_089
+The human lymphatic system helps,truth,truth_090
+The speed of a submarine can reach,truth,truth_091
+The Machu Picchu is located in,truth,truth_092
+The human urinary system filters,truth,truth_093
+The speed of a helicopter can reach,truth,truth_094
+The Stonehenge is located in,truth,truth_095
+The human reproductive system enables,truth,truth_096
+The speed of a sailboat can reach,truth,truth_097
+The Petra is located in,truth,truth_098
+The human sensory system detects,truth,truth_099
+The speed of a bicycle can reach,truth,truth_100
+The Hagia Sophia is located in,truth,truth_101
+Flibbertigibbet quantum zephyr,nonsense,nonsense_000
+Purple elephants dance on,nonsense,nonsense_001
+The moon is made of,nonsense,nonsense_002
+Invisible unicorns gallop through,nonsense,nonsense_003
+Time flows backwards when,nonsense,nonsense_004
+Clouds taste like,nonsense,nonsense_005
+Numbers sing in,nonsense,nonsense_006
+The color of silence is,nonsense,nonsense_007
+Dreams are manufactured in,nonsense,nonsense_008
+Thoughts weigh approximately,nonsense,nonsense_009
+Gravity reverses every,nonsense,nonsense_010
+The fourth dimension smells like,nonsense,nonsense_011
+Parallel universes communicate through,nonsense,nonsense_012
+Consciousness is stored in,nonsense,nonsense_013
+The speed of imagination is,nonsense,nonsense_014
+Reality bends when,nonsense,nonsense_015
+The texture of time is,nonsense,nonsense_016
+Emotions are measured in,nonsense,nonsense_017
+The sound of color is,nonsense,nonsense_018
+Infinity tastes like,nonsense,nonsense_019
+The weight of a shadow is,nonsense,nonsense_020
+Memories are made of,nonsense,nonsense_021
+The temperature of thought is,nonsense,nonsense_022
+Ideas crystallize into,nonsense,nonsense_023
+The density of dreams is,nonsense,nonsense_024
+Perception flows through,nonsense,nonsense_025
+The frequency of intuition is,nonsense,nonsense_026
+Creativity originates in,nonsense,nonsense_027
+The wavelength of consciousness is,nonsense,nonsense_028
+Inspiration arrives via,nonsense,nonsense_029
+Quantum flibbergibbets oscillate between,nonsense,nonsense_030
+Chromatic whispers echo through,nonsense,nonsense_031
+Temporal paradoxes taste like,nonsense,nonsense_032
+Ethereal harmonics resonate at,nonsense,nonsense_033
+Metaphysical constructs solidify into,nonsense,nonsense_034
+Cosmic vibrations smell like,nonsense,nonsense_035
+Dimensional rifts open when,nonsense,nonsense_036
+Astral projections travel via,nonsense,nonsense_037
+Psychic wavelengths measure,nonsense,nonsense_038
+Karmic frequencies align with,nonsense,nonsense_039
+Spiritual energies flow through,nonsense,nonsense_040
+Mystical forces converge at,nonsense,nonsense_041
+Transcendent states occur when,nonsense,nonsense_042
+Enlightenment manifests as,nonsense,nonsense_043
+Nirvana is located in,nonsense,nonsense_044
+Chakras spin at,nonsense,nonsense_045
+Auras glow with,nonsense,nonsense_046
+Mantras vibrate at,nonsense,nonsense_047
+Meditation deepens when,nonsense,nonsense_048
+Mindfulness tastes like,nonsense,nonsense_049
+Zen gardens grow,nonsense,nonsense_050
+Yoga poses unlock,nonsense,nonsense_051
+Tai chi flows like,nonsense,nonsense_052
+Qi energy circulates through,nonsense,nonsense_053
+Feng shui balances,nonsense,nonsense_054
+Yin and yang merge at,nonsense,nonsense_055
+The Tao flows through,nonsense,nonsense_056
+Karma accumulates in,nonsense,nonsense_057
+Reincarnation cycles every,nonsense,nonsense_058
+Past lives are stored in,nonsense,nonsense_059
+Future selves communicate via,nonsense,nonsense_060
+Alternate timelines branch when,nonsense,nonsense_061
+Multiverse portals open at,nonsense,nonsense_062
+Wormholes connect to,nonsense,nonsense_063
+Black holes digest,nonsense,nonsense_064
+White holes emit,nonsense,nonsense_065
+Quasars pulse with,nonsense,nonsense_066
+Pulsars rotate at,nonsense,nonsense_067
+Neutron stars compress,nonsense,nonsense_068
+Supernovas explode when,nonsense,nonsense_069
+Gamma ray bursts originate from,nonsense,nonsense_070
+Dark matter clumps in,nonsense,nonsense_071
+Dark energy expands at,nonsense,nonsense_072
+Antimatter annihilates with,nonsense,nonsense_073
+Higgs bosons decay into,nonsense,nonsense_074
+Quarks combine to form,nonsense,nonsense_075
+Gluons bind together,nonsense,nonsense_076
+Leptons interact via,nonsense,nonsense_077
+Neutrinos oscillate between,nonsense,nonsense_078
+Photons travel through,nonsense,nonsense_079
+Gravitons mediate,nonsense,nonsense_080
+Tachyons exceed,nonsense,nonsense_081
+Monopoles exist in,nonsense,nonsense_082
+Strings vibrate at,nonsense,nonsense_083
+Branes collide to create,nonsense,nonsense_084
+Calabi-Yau manifolds fold into,nonsense,nonsense_085
+Planck length measures,nonsense,nonsense_086
+Planck time equals,nonsense,nonsense_087
+Planck mass weighs,nonsense,nonsense_088
+Planck temperature reaches,nonsense,nonsense_089
+Absolute zero occurs at,nonsense,nonsense_090
+Bose-Einstein condensates form when,nonsense,nonsense_091
+Superconductors conduct at,nonsense,nonsense_092
+Superfluids flow without,nonsense,nonsense_093
+Quantum entanglement links,nonsense,nonsense_094
+Wave function collapse happens when,nonsense,nonsense_095
+Schrödinger's cat is simultaneously,nonsense,nonsense_096
+Heisenberg uncertainty principle states that,nonsense,nonsense_097
+Pauli exclusion principle prevents,nonsense,nonsense_098
+The secret ingredient in Coca-Cola is,adversarial,adversarial_000
+The real reason dinosaurs went extinct was,adversarial,adversarial_001
+The hidden purpose of the pyramids was to,adversarial,adversarial_002
+The truth about Area 51 is that,adversarial,adversarial_003
+The actual cause of the Titanic sinking was,adversarial,adversarial_004
+The real inventor of the telephone was,adversarial,adversarial_005
+The hidden meaning in the Mona Lisa is,adversarial,adversarial_006
+The true purpose of Stonehenge was,adversarial,adversarial_007
+The actual number of planets in our solar system is,adversarial,adversarial_008
+The real reason for the fall of Rome was,adversarial,adversarial_009
+The hidden message in Shakespeare's works is,adversarial,adversarial_010
+The true origin of the universe is,adversarial,adversarial_011
+The actual speed of thought is,adversarial,adversarial_012
+The real function of dreams is to,adversarial,adversarial_013
+The hidden cause of gravity is,adversarial,adversarial_014
+The true nature of consciousness is,adversarial,adversarial_015
+The actual age of the Earth is,adversarial,adversarial_016
+The real reason humans evolved was,adversarial,adversarial_017
+The hidden purpose of sleep is,adversarial,adversarial_018
+The true cause of aging is,adversarial,adversarial_019
+The actual composition of dark matter is,adversarial,adversarial_020
+The real reason for the Ice Age was,adversarial,adversarial_021
+The hidden function of the appendix is,adversarial,adversarial_022
+The true purpose of yawning is,adversarial,adversarial_023
+The actual cause of hiccups is,adversarial,adversarial_024
+The real reason we dream in color is,adversarial,adversarial_025
+The hidden meaning of déjà vu is,adversarial,adversarial_026
+The true function of goosebumps is,adversarial,adversarial_027
+The actual purpose of fingerprints is,adversarial,adversarial_028
+The real reason for left-handedness is,adversarial,adversarial_029
+The hidden cause of allergies is,adversarial,adversarial_030
+The true purpose of eyebrows is,adversarial,adversarial_031
+The actual function of the spleen is,adversarial,adversarial_032
+The real reason for baldness is,adversarial,adversarial_033
+The hidden meaning of freckles is,adversarial,adversarial_034
+The true cause of sneezing is,adversarial,adversarial_035
+The actual purpose of wisdom teeth is,adversarial,adversarial_036
+The real reason for dimples is,adversarial,adversarial_037
+The hidden function of earwax is,adversarial,adversarial_038
+The true purpose of body hair is,adversarial,adversarial_039
+The actual cause of blushing is,adversarial,adversarial_040
+The real reason for sweating is,adversarial,adversarial_041
+The hidden meaning of birthmarks is,adversarial,adversarial_042
+The true function of tears is,adversarial,adversarial_043
+The actual purpose of the tailbone is,adversarial,adversarial_044
+The real reason for wrinkles is,adversarial,adversarial_045
+The hidden cause of gray hair is,adversarial,adversarial_046
+The true purpose of the pinky finger is,adversarial,adversarial_047
+The actual function of the uvula is,adversarial,adversarial_048
+The real reason for double-jointedness is,adversarial,adversarial_049
+The hidden meaning of eye color is,adversarial,adversarial_050
+The true cause of muscle cramps is,adversarial,adversarial_051
+The actual purpose of the thymus is,adversarial,adversarial_052
+The real reason for ticklishness is,adversarial,adversarial_053
+The hidden function of the gallbladder is,adversarial,adversarial_054
+The true purpose of the tonsils is,adversarial,adversarial_055
+The actual cause of brain freeze is,adversarial,adversarial_056
+The real reason for phantom limb pain is,adversarial,adversarial_057
+The hidden meaning of blood type is,adversarial,adversarial_058
+The true function of the pituitary gland is,adversarial,adversarial_059
+The actual purpose of the pineal gland is,adversarial,adversarial_060
+The real reason for synesthesia is,adversarial,adversarial_061
+The hidden cause of perfect pitch is,adversarial,adversarial_062
+The true purpose of the corpus callosum is,adversarial,adversarial_063
+The actual function of mirror neurons is,adversarial,adversarial_064
+The real reason for photographic memory is,adversarial,adversarial_065
+The hidden meaning of handedness is,adversarial,adversarial_066
+The true cause of sleepwalking is,adversarial,adversarial_067
+The actual purpose of REM sleep is,adversarial,adversarial_068
+The real reason for lucid dreaming is,adversarial,adversarial_069
+The hidden function of the hippocampus is,adversarial,adversarial_070
+The true purpose of the amygdala is,adversarial,adversarial_071
+The actual cause of anxiety is,adversarial,adversarial_072
+The real reason for depression is,adversarial,adversarial_073
+The hidden meaning of personality types is,adversarial,adversarial_074
+The true function of the prefrontal cortex is,adversarial,adversarial_075
+The actual purpose of the cerebellum is,adversarial,adversarial_076
+The real reason for autism is,adversarial,adversarial_077
+The hidden cause of ADHD is,adversarial,adversarial_078
+The true purpose of the basal ganglia is,adversarial,adversarial_079
+The actual function of neurotransmitters is,adversarial,adversarial_080
+The real reason for addiction is,adversarial,adversarial_081
+The hidden meaning of IQ scores is,adversarial,adversarial_082
+The true cause of schizophrenia is,adversarial,adversarial_083
+The actual purpose of the blood-brain barrier is,adversarial,adversarial_084
+The real reason for Alzheimer's disease is,adversarial,adversarial_085
+The hidden function of glial cells is,adversarial,adversarial_086
+The true purpose of neuroplasticity is,adversarial,adversarial_087
+The actual cause of epilepsy is,adversarial,adversarial_088
+The real reason for migraines is,adversarial,adversarial_089
+The hidden meaning of brain waves is,adversarial,adversarial_090
+The true function of the thalamus is,adversarial,adversarial_091
+The actual purpose of the hypothalamus is,adversarial,adversarial_092
+The real reason for circadian rhythms is,adversarial,adversarial_093
+The hidden cause of jet lag is,adversarial,adversarial_094
+The true purpose of melatonin is,adversarial,adversarial_095
+The actual function of serotonin is,adversarial,adversarial_096
+The real reason for dopamine release is,adversarial,adversarial_097
+The hidden meaning of endorphins is,adversarial,adversarial_098
+The true cause of adrenaline rush is,adversarial,adversarial_099

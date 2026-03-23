@@ -1,0 +1,28 @@
+# Safety Ratio Research - Python Dependencies
+# SPCOM 2026 Paper Reproduction
+
+# Core ML Libraries
+torch==2.0.0
+transformer-lens==1.14.0
+transformers==4.30.0
+
+# Data Processing
+pandas==2.0.0
+numpy==1.24.0
+
+# Statistical Analysis
+scipy==1.10.0
+scikit-learn==1.2.2
+
+# Visualization
+matplotlib==3.7.0
+seaborn==0.12.0
+
+# Utilities
+tqdm==4.65.0
+jupyter==1.0.0
+ipykernel==6.23.0
+
+# Optional (for faster computation)
+# accelerate==0.20.0  # Uncomment if you have GPU
+
